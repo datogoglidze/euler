@@ -4,7 +4,11 @@
 
 
 def largest_palindrome_product(n: int) -> int | None:
-    products = {i * k for i in range(10 ** (n - 1), 10**n) for k in range(i, 10**n)}
+    products = []
+
+    for i in range((10**n) - 1, 10 ** (n - 1) - 1, -1):
+        for k in range(i, 10 ** (n - 1) - 1, -1):
+            products.append(i * k)
 
     for product in sorted(products, reverse=True):
         if str(product) == str(product)[::-1]:
