@@ -9,10 +9,7 @@ def largest_palindrome_product(n: int) -> int | None:
     ]
 
     for i in sorted(products, reverse=True):
-        prefix = str(i)[:n]
-        suffix = str(i)[n:][::-1]
-
-        if prefix == suffix:
+        if str(i) == str(i)[::-1]:
             return i
 
     return None
