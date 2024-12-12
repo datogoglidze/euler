@@ -4,11 +4,9 @@
 
 
 def largest_palindrome_product(n: int) -> int:
-    products = []
-
-    for i in range(10 ** (n - 1), 10**n):
-        for k in range(10 ** (n - 1), 10**n):
-            products.append(i * k)
+    products = [
+        i * k for i in range(10 ** (n - 1), 10**n) for k in range(10 ** (n - 1), 10**n)
+    ]
 
     for i in sorted(products, reverse=True):
         prefix = str(i)[:n]
