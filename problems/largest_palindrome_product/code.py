@@ -8,7 +8,8 @@ def largest_palindrome_product(n: int) -> int | None:
 
     for i in range((10**n) - 1, 10 ** (n - 1) - 1, -1):
         for k in range(i, 10 ** (n - 1) - 1, -1):
-            if str(i * k) == str(i * k)[::-1]:
-                products.append(i * k)
+            product = i * k
+            if str(product) == str(product)[::-1]:
+                products.append(product)
 
     return max(products) if products else None
