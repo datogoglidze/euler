@@ -6,9 +6,9 @@
 def largest_palindrome_product(n: int) -> int:
     largest_palindrome = 0
 
-    for i in range((10**n) - 1, 10 ** (n - 1) - 1, -1):
-        for k in range(i, 10 ** (n - 1) - 1, -1):
-            product = i * k
+    for multiplier in range((10**n) - 1, 10 ** (n - 1) - 1, -1):
+        for multiplicand in range(multiplier, 10 ** (n - 1) - 1, -1):
+            product = multiplier * multiplicand
 
             if product < largest_palindrome:
                 break
