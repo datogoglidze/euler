@@ -5,7 +5,7 @@
 def largest_prime_factor(n: int) -> int:
     lst = []
 
-    for potential_factor in range(2, n + 1):
+    for potential_factor in range(2, int(n**0.5) + 1):
         if is_prime(potential_factor):
             lst.append(potential_factor)
 
@@ -13,9 +13,11 @@ def largest_prime_factor(n: int) -> int:
         if n % prime == 0:
             return prime
 
+    return n
+
 
 def is_prime(n: int) -> bool:
-    for divisor in range(2, n):
+    for divisor in range(2, int(n**0.5) + 1):
         if n % divisor == 0:
             return False
 
