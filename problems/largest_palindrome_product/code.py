@@ -13,7 +13,11 @@ def largest_palindrome_product(n: int) -> int:
             if product < largest_palindrome:
                 break
 
-            if str(product) == str(product)[::-1]:
+            if is_palindrome(product):
                 largest_palindrome = product
 
     return largest_palindrome
+
+
+def is_palindrome(number: int) -> bool:
+    return str(number) == str(number)[::-1]
