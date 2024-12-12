@@ -11,7 +11,10 @@ def largest_palindrome_product(n: int) -> int:
             products.append(i * k)
 
     for i in sorted(products, reverse=True):
-        if str(i)[:n] == str(i)[n:][::-1]:
+        prefix = str(i)[:n]
+        suffix = str(i)[n:][::-1]
+
+        if prefix == suffix:
             return i
 
     return -1
