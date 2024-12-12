@@ -12,3 +12,7 @@ def test_palindrome_for_2_digits() -> None:
 
 def test_palindrome_for_3_digits() -> None:
     assert largest_palindrome_product(3) == 906609
+
+
+def test_palindrome_for_4_digits() -> None:
+    assert largest_palindrome_product(4) == 99000099
