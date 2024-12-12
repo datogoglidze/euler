@@ -3,13 +3,13 @@
 
 
 def largest_prime_factor(n: int) -> int:
-    lst = []
+    prime_numbers = []
 
     for potential_factor in range(2, int(n**0.5) + 1):
         if is_prime(potential_factor):
-            lst.append(potential_factor)
+            prime_numbers.append(potential_factor)
 
-    for prime in reversed(lst):
+    for prime in reversed(prime_numbers):
         if n % prime == 0:
             return prime
 
