@@ -9,9 +9,9 @@ def largest_prime_factor(n: int) -> int:
         if is_prime(potential_factor):
             prime_numbers.append(potential_factor)
 
-    for prime in reversed(prime_numbers):
-        if n % prime == 0:
-            return prime
+    for number in reversed(prime_numbers):
+        if n % number == 0:
+            return number
 
     return n
 
