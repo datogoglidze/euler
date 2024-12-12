@@ -3,17 +3,17 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 
-def largest_palindrome_product(n: int) -> int | None:
-    products = [0]
+def largest_palindrome_product(n: int) -> int:
+    largest_palindrome = 0
 
     for i in range((10**n) - 1, 10 ** (n - 1) - 1, -1):
         for k in range(i, 10 ** (n - 1) - 1, -1):
             product = i * k
 
-            if product < max(products):
+            if product < largest_palindrome:
                 break
 
             if str(product) == str(product)[::-1]:
-                products.append(product)
+                largest_palindrome = product
 
-    return max(products) if products else None
+    return largest_palindrome
