@@ -6,8 +6,8 @@
 def largest_palindrome_product(n: int) -> int:
     products = []
 
-    for i in range(pow(10, n - 1), int("9" * n) + 1):
-        for k in range(pow(10, n - 1), int("9" * n) + 1):
+    for i in range(10 ** (n - 1), int("9" * n) + 1):
+        for k in range(10 ** (n - 1), int("9" * n) + 1):
             products.append(i * k)
 
     for i in sorted(products, reverse=True):
