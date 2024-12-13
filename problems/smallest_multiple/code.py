@@ -12,7 +12,7 @@ def smallest_multiple(n: int) -> int:
 
         for i in range(1, n + 1):
             if counter % i != 0:
-                counter += 1
+                counter += n
                 is_divisible = False
                 break
 
