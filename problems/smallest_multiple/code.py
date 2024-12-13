@@ -14,6 +14,7 @@ def smallest_multiple(n: int) -> int:
             if counter % i != 0:
                 counter += 1
                 is_divisible = False
+                break
 
         if is_divisible:
             return counter
