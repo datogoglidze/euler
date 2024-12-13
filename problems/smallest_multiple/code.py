@@ -5,16 +5,16 @@
 
 
 def smallest_multiple(n: int) -> int:
-    counter = n
+    number = n
 
     while True:
         is_divisible = True
 
         for i in range(1, n + 1):
-            if counter % i != 0:
-                counter += n
+            if number % i != 0:
+                number += n
                 is_divisible = False
                 break
 
         if is_divisible:
-            return counter
+            return number
